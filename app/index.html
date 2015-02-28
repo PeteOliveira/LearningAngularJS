@@ -15,16 +15,20 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="StoreController as store">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-controller="StoreController as store", class="container">
-      <h1> {{ store.product.name }} <h1>
-      <h2> {{ store.product.price }} <h2>
-      <p> {{ store.product.description }} </p>
+    <div class="container">
+      <div ng-hide="store.product.soldOut">
+        <h1> {{ store.product.name }} <h1>
+        <h2> {{ store.product.price }} <h2>
+        <p> {{ store.product.description }} </p>
+        <p> {{ store.product.soldOut }} </p>
+        <button ng-show ="store.product.canPurchase"> Add to Cart </button>
+      </div>
     </div>
 
 
