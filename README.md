@@ -6,4 +6,4 @@ grunt build - to build the final files, stored in dist directory
 ## Host on Github Pages
 create branch gh-pages
 remove dist from gitignore
-http://ghar.github.io/LearningAngularJS/dist/
+http://ghar.github.io/LearningAngularJS/dist/index.html
