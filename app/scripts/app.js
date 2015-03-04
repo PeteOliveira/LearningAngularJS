@@ -34,7 +34,21 @@
      description: 'exceptional gem',
      canPurchase: true,
      soldOut: false
-  }
+  },
+    {
+      name: 'Decagonal',
+      price: 8,
+      description: 'exceptional gem',
+      canPurchase: true,
+      soldOut: false
+    },
+    {
+      name: 'Heptagonal',
+      price: 6.2,
+      description: 'exceptional gem',
+      canPurchase: true,
+      soldOut: false
+    }
 ];
 
 })();
