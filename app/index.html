@@ -31,7 +31,9 @@
         </h3>
         <!-- Image Gallery  -->
         <div class="gallery">
-          <img src="holder.js/200x100/sky">
+          <img ng-src="{{product.images[0].real}}">
+          <img ng-src="{{product.images[0].full}}">
+          <img ng-src="{{product.images[0].thumb}}">
         </div>
       </li>
     </ul>
