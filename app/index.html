@@ -21,15 +21,22 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-repeat="product in store.products", class="container">
-      <div ng-hide="product.soldOut">
-        <h1> {{ product.name }} <h1>
-        <h2> {{ product.price }} <h2>
-        <p> {{ product.description }} </p>
-        <button ng-show ="product.canPurchase"> Add to Cart </button>
-      </div>
-    </div>
-
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="product in store.products">
+        <h3>
+          {{product.name}}
+          <em class="pull-right">{{product.price | currency }}</em>
+          <p> {{ product.description }} </p>
+          <button ng-show ="product.canPurchase"> Add to Cart </button>
+        </h3>
+        <!-- Image Gallery  -->
+        <div class="gallery">
+          <img ng-src="{{product.images[0].real}}">
+          <img ng-src="{{product.images[0].full}}">
+          <img ng-src="{{product.images[0].thumb}}">
+        </div>
+      </li>
+    </ul>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
      <script>
@@ -55,6 +62,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/holderjs/holder.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
